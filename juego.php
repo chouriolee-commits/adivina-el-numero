@@ -4,7 +4,7 @@ session_start();
 $mensaje = "";
 $mensaje2 = "";
 
-//Adivina el número: Genera un número aleatorio y permite al usuario intentar adivinarlo, indicando si el número ingresado es mayor, menor o correcto
+
 
 
 //compara si el numero aleatorio existe, sino lo crea en una sesion

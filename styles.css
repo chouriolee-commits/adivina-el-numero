@@ -1,131 +1,148 @@
+/* Base y variables de tema */
+:root {
+    --bg-left: #24243e;
+    --bg-center: #302b63;
+    --bg-right: #0f0c29;
+    --text-light: #fff;
+    --text-dark: #3f3f3f;
+    --panel-border: rgba(255, 255, 255, 0.1);
+    --panel-bg: rgba(255, 255, 255, 0.05);
+    --fieldset-border: rgba(255, 255, 255, 0.25);
+    --primary: #6c63ff;
+    --primary-hover: #5848e5;
+    --secondary: #2c2f4a;
+    --secondary-hover: #3a3d63;
+    --control-border: #3a3a5a;
+    --control-bg: #f1f1f19f;
+}
+
 * {
     box-sizing: border-box;
 }
 
+/* Layout general */
 body {
     margin: 0;
     padding: 0;
-    background: #0f0c29;
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
     font-size: 20px;
-
+    background: var(--bg-right);
+    background: -webkit-linear-gradient(to right, var(--bg-left), var(--bg-center), var(--bg-right));
+    background: linear-gradient(to right, var(--bg-left), var(--bg-center), var(--bg-right));
 }
 
 .container__form {
     display: flex;
+    align-items: center;
+    justify-content: center;
     max-width: 100dvw;
     height: 90dvh;
     margin: 10px;
-    justify-content: center;
-    align-items: center;
-   
-
+    
 }
 
-
-
+/* Tarjeta del formulario */
 .form {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     width: clamp(300px, 100%, 430px);
     min-height: 320px;
     margin: auto;
     padding: 1rem;
-   
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-      align-items: center;
-    justify-content: center;
     text-align: center;
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff;
+    color: var(--text-light);
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.fieldset{
+.fieldset {
     width: 100%;
     max-width: 350px;
     min-inline-size: 0;
     margin: 0 auto;
     padding: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid var(--fieldset-border);
     border-radius: 10px;
 }
 
+/* Contenedor interno de input + botones */
 .from__buttons__input {
     display: flex;
-    max-width: 100%;
-    border: 2px solid black;
-    min-height: 70px;
     flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 70px;
     gap: 5px;
     margin: 0 auto;
     padding: 8px;
     text-align: center;
-    justify-content: center;
+    border: 2px solid #000;
     border-radius: 10px;
+}
+
+/* Controles */
+input,
+button {
+    width: 100%;
+    border-radius: 8px;
 }
 
 input {
     padding: 5px;
-    width: 100%;
-    background: #f1f1f19f;
-    color: #3f3f3f;
-    border: 1px solid #3a3a5a;
-    border-radius: 8px;
+    color: var(--text-dark);
+    background: var(--control-bg);
+    border: 1px solid var(--control-border);
     outline: none;
 }
 
 input:focus {
-  border-color: #6c63ff;
- 
+    border-color: var(--primary);
 }
 
 button {
     padding: 8px;
-    border-radius: 10px;
-    width: 100%;
 }
 
-.btn-ejecutar{
-    background-color: #6c63ff;
-    color: #fff;
-    border: none;
+/* Botones de acción */
+.btn-ejecutar,
+.btn-reiniciar {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-ejecutar {
     padding: 10px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.2s;
+    color: var(--text-light);
+    background-color: var(--primary);
+    border: none;
 }
 
-.btn-ejecutar:hover{
-    background-color:#5848e5;
+.btn-ejecutar:hover {
+    background-color: var(--primary-hover);
 }
 
-.btn-reiniciar{
-    background: #2c2f4a;
-    color:#fff;
+.btn-reiniciar {
+    color: var(--text-light);
+    background: var(--secondary);
     border: 1px solid #444;
-    border-radius: 8px;
-    cursor: pointer;
-     transition: 0.2s;
 }
 
 .btn-reiniciar:hover {
-  background: #3a3d63;
+    background: var(--secondary-hover);
 }
 
-.legend{
+/* Tipografía destacada */
+.legend,
+.intentos {
+    font-weight: 600;
+    font-size: 23px;
+}
+
+.legend {
     margin: 0 auto;
     padding: 0 8px;
-    font-weight: 600;
-    font-size: 23px;
 }
-
-.intentos{
-    font-weight: 600;
-    font-size: 23px;
-}
-
