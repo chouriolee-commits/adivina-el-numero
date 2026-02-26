@@ -49,7 +49,7 @@ if (isset($_POST["guardar"])) {
 if (isset($_POST["Reiniciar"])) {
     session_unset(); //limpia todas las variables de sesión
     session_destroy(); //destruye la sesión
-    header("Location: juego.php"); //redirecciona a la misma página para reiniciar el juego
+    header("Location: index.php"); //redirecciona a la misma página para reiniciar el juego
     exit();
 }
 
