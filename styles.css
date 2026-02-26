@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    font-size: 20px;
+
+}
+
+.container__form {
+    display: flex;
+    max-width: 100dvw;
+    height: 90dvh;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+
+
+
+.form {
+
+    width: clamp(300px, 100%, 430px);
+    min-height: 320px;
+    margin: auto;
+    padding: 1rem;
+   
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+      align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fieldset{
+    width: 100%;
+    max-width: 350px;
+    min-inline-size: 0;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+}
+
+.from__buttons__input {
+    display: flex;
+    max-width: 100%;
+    border: 2px solid black;
+    min-height: 70px;
+    flex-direction: column;
+    gap: 5px;
+    margin: 0 auto;
+    padding: 8px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+input {
+    padding: 5px;
+    width: 100%;
+    background: #f1f1f19f;
+    color: #3f3f3f;
+    border: 1px solid #3a3a5a;
+    border-radius: 8px;
+    outline: none;
+}
+
+input:focus {
+  border-color: #6c63ff;
+ 
+}
+
+button {
+    padding: 8px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.btn-ejecutar{
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-ejecutar:hover{
+    background-color:#5848e5;
+}
+
+.btn-reiniciar{
+    background: #2c2f4a;
+    color:#fff;
+    border: 1px solid #444;
+    border-radius: 8px;
+    cursor: pointer;
+     transition: 0.2s;
+}
+
+.btn-reiniciar:hover {
+  background: #3a3d63;
+}
+
+.legend{
+    margin: 0 auto;
+    padding: 0 8px;
+    font-weight: 600;
+    font-size: 23px;
+}
+
+.intentos{
+    font-weight: 600;
+    font-size: 23px;
+}
+
