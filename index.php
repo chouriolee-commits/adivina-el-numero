@@ -9,7 +9,7 @@ $mensaje2 = "";
 
 //compara si el numero aleatorio existe, sino lo crea en una sesion
 if (!isset($_SESSION["num_correcto"])) {
-    $_SESSION["num_correcto"] = random_int(1, 5);
+    $_SESSION["num_correcto"] = random_int(1, 10);
     $_SESSION["intentos"] = 0;
 }
 
@@ -73,7 +73,7 @@ if (isset($_POST["Reiniciar"])) {
             <form class="form" method="POST" autocomplete="off">
 
                 <fieldset class="fieldset">
-                    <legend class="legend">Adivina un número</legend>
+                    <legend class="legend">Adivina un número del 1 al 10</legend>
                     <div class="from__buttons__input">
                         <input type="number" autocomplete="off" <?= ($_SESSION["juego_terminado"] ?? false) ? 'disabled' : '' ?> id="num" name="num" required>
                         <button class="btn-ejecutar" name="guardar" <?= ($_SESSION["juego_terminado"] ?? false) ? 'disabled ' : ''; ?>>Ejecutar</button>
